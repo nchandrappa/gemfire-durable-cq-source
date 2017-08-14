@@ -112,13 +112,13 @@ public class GemfireCqSourceConfiguration {
 	}
 
 	@Bean ContinuousQueryListener continuousQueryListener() {
-		ContinuousQueryMessageProducer continuousQueryMessageProducer = new
-				ContinuousQueryMessageProducer(continuousQueryListenerContainer(),
+		ContinuousQueryJSONMessageProducer continuousQueryJSONMessageProducer = new
+				ContinuousQueryJSONMessageProducer(continuousQueryListenerContainer(),
 				config.getQuery());
-		continuousQueryMessageProducer.setPayloadExpressionString(config.getCqEventExpression());
-		continuousQueryMessageProducer.setOutputChannel(routerChannel());
-		continuousQueryMessageProducer.setDurable(config.isDurable());
-		return continuousQueryMessageProducer;
+		continuousQueryJSONMessageProducer.setPayloadExpressionString(config.getCqEventExpression());
+		continuousQueryJSONMessageProducer.setOutputChannel(routerChannel());
+		continuousQueryJSONMessageProducer.setDurable(config.isDurable());
+		return continuousQueryJSONMessageProducer;
 	}
 
 

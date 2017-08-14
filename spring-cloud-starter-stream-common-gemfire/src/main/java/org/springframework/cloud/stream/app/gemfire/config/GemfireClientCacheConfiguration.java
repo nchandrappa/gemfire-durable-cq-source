@@ -40,6 +40,7 @@ public class GemfireClientCacheConfiguration {
 		clientCacheFactoryBean.setReadyForEvents(true);
 		clientCacheFactoryBean.setDurableClientId(config.getDurableClientId());
 		clientCacheFactoryBean.setDurableClientTimeout(config.getDurableClientTimeout());
+		clientCacheFactoryBean.setReadyForEvents(true);
 		return clientCacheFactoryBean;
 	}
 }

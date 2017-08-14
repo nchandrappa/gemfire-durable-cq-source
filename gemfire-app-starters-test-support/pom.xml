@@ -20,7 +20,17 @@
             <groupId>com.gemstone.gemfire</groupId>
             <artifactId>gemfire</artifactId>
             <optional>true</optional>
+            <version>8.2.1</version>
         </dependency>
     </dependencies>
+
+     <repositories>
+     	<repository>
+            <id>gemstone-release-pivotal</id>
+            <url>http://repo.spring.io/gemstone-release-pivotal/</url>
+            <name>Gemfire Release Repository</name>
+        </repository>
+     </repositories>
+
 
 </project>
